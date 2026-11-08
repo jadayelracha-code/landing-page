@@ -345,6 +345,7 @@ a { color: var(--accent); }
 .bico { width: 18px; height: 18px; fill: var(--c); flex: none; }
 
 .feature { display: flex; gap: 16px; align-items: flex-start; }
+.feature-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .feature-ico { margin-top: 2px; }
 .feature-body { min-width: 0; }
 
