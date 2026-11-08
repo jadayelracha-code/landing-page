@@ -1,9 +1,9 @@
 // Paste your booking link here (for example https://calendly.com/your-name/30min).
-// While it is still the placeholder, every "Book a free 30-min audit" button sends an email instead.
+// While it is still the placeholder, every "Book a free intro call" button sends an email instead.
 const CALENDLY_URL = "https://calendly.com/jadayelracha/30min-free-call";
 
 const PLACEHOLDER = "https://calendly.com/YOUR-LINK";
-const FALLBACK = "mailto:jadayelracha@gmail.com?subject=Free%2030-min%20automation%20audit";
+const FALLBACK = "mailto:jadayelracha@gmail.com?subject=Free%2030-min%20intro%20call";
 
 const bookingUrl = CALENDLY_URL && CALENDLY_URL !== PLACEHOLDER ? CALENDLY_URL : FALLBACK;
 

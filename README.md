@@ -1,6 +1,6 @@
 # Racha Jadayel · AI & n8n automation landing page
 
-One-page, mobile-first site for people I meet at Web Summit. They scan a QR code, land here and book a free 30-minute automation audit.
+One-page, mobile-first site for people I meet at Web Summit. They scan a QR code, land here and book a free 30-minute intro call.
 
 Plain HTML, CSS and a little JS. No framework, no build step.
 
@@ -27,7 +27,7 @@ Open `script.js` and replace the placeholder on line 3:
 const CALENDLY_URL = "https://calendly.com/YOUR-LINK";
 ```
 
-with your real link, for example `"https://calendly.com/your-name/30min"`. Commit and push, and every **Book a free 30-min audit** button will open Calendly.
+with your real link, for example `"https://calendly.com/your-name/30min"`. Commit and push, and every **Book a free intro call** button will open Calendly.
 
 While the value is still the placeholder, the buttons fall back to an email to jadayelracha@gmail.com.
 
