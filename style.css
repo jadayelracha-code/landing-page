@@ -303,17 +303,12 @@ a { color: var(--accent); }
 .tools-title { text-align: center; color: var(--muted); }
 .marquees { display: grid; gap: 12px; mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
 .marquee { display: flex; overflow: hidden; }
-.track { display: flex; gap: 12px; padding-right: 12px; flex: none; animation: scrollX 70s linear infinite; }
-.marquee.rev .track { animation-direction: reverse; animation-duration: 80s; }
+.track { display: flex; gap: 12px; padding-right: 12px; flex: none; animation: scrollX 45s linear infinite; }
+.marquee.rev .track { animation-direction: reverse; animation-duration: 50s; }
 .marquee:hover .track { animation-play-state: paused; }
 .chip { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; padding: 10px 18px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); font-weight: 600; font-size: .95rem; color: var(--text); }
 .chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #22d3ee); }
 @keyframes scrollX { to { transform: translateX(-100%); } }
-@media (prefers-reduced-motion: reduce) {
-  .marquee { flex-wrap: wrap; justify-content: center; }
-  .track { flex-wrap: wrap; justify-content: center; }
-  .track[aria-hidden] { display: none; }
-}
 
 /* Scroll reveal (only when JS runs, so content never stays hidden) */
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--d, 0) * 110ms); }
@@ -343,4 +338,7 @@ a { color: var(--accent); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .js .reveal { opacity: 1; transform: none; }
+  /* The tools strip keeps moving gently (it pauses on hover) */
+  .track { animation: scrollX 60s linear infinite !important; }
+  .marquee.rev .track { animation-direction: reverse !important; }
 }
