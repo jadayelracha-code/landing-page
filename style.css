@@ -201,6 +201,9 @@ a { color: var(--accent); }
 .hl::after { content: ""; position: absolute; left: -4px; right: -4px; bottom: .02em; height: .42em; z-index: -1; border-radius: 4px; background: linear-gradient(90deg, rgba(252,211,77,.45), rgba(245,158,11,.3)); transform: skewX(-8deg); }
 .js .hl::after { transform: skewX(-8deg) scaleX(0); transform-origin: left; transition: transform .7s var(--ease) .5s; }
 .js .steps-lead.in .hl::after { transform: skewX(-8deg) scaleX(1); }
+.steps-lead .evals { color: #6ee7b7; white-space: nowrap; }
+.js .steps-lead .evals { opacity: 0; transform: translateY(6px); display: inline-block; transition: opacity .6s var(--ease) 3.1s, transform .6s var(--ease) 3.1s; }
+.js .steps-lead.in .evals { opacity: 1; transform: none; }
 .typing { display: inline-block; white-space: nowrap; vertical-align: bottom; overflow: hidden; }
 .js .typing { max-width: 0; transition: max-width 1.6s steps(24, end) 1.3s; }
 .js .steps-lead.in .typing { max-width: 13em; }
