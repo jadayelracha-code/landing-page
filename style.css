@@ -223,6 +223,8 @@ a { color: var(--accent); }
 .photo-ring img { clip-path: circle(50%); display: block; width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid var(--bg); background: #1a1a2e; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+.wave { display: inline-block; transform-origin: 70% 70%; animation: wave 2.5s ease-in-out infinite; }
+@keyframes wave { 0%, 60%, 100% { transform: rotate(0); } 10%, 30% { transform: rotate(14deg); } 20% { transform: rotate(-8deg); } 40% { transform: rotate(-4deg); } 50% { transform: rotate(10deg); } }
 /* CTA */
 .cta {
   text-align: center; border-radius: 28px; padding: 56px 24px;
