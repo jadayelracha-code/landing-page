@@ -62,7 +62,7 @@ if (uc && "IntersectionObserver" in window) {
       play(document.querySelector(".uc-panel:not([hidden])"));
       ucObs.disconnect();
     }
-  }, { threshold: 0.3 });
+  }, { threshold: 0, rootMargin: "0px 0px -35% 0px" });
   ucObs.observe(uc);
 } else if (uc) {
   panels.forEach((p) => p.classList.add("play"));
