@@ -523,7 +523,16 @@ html:not(.js) .day-free { position: static; opacity: 1; transform: none; margin-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .js .reveal { opacity: 1; transform: none; }
+  /* How it works keeps its timeline animation for everyone */
+  .steps::after { animation: cometY 3.5s linear infinite !important; }
+  .js .steps li::before { transition: opacity .4s, transform .4s !important; }
+  .js .steps li.lit::before { animation: stepPop .55s !important; }
+  .js .steps li > * { transition: opacity .5s, transform .5s !important; }
+  .js .steps li.lit::after { animation: ringPing 3.5s ease-out infinite !important; animation-delay: calc(.6s + var(--k) * .62s) !important; }
   /* The tools strip keeps moving gently (it pauses on hover) */
   .track { animation: scrollX 60s linear infinite !important; }
   .marquee.rev .track { animation-direction: reverse !important; }
+}
+@media (prefers-reduced-motion: reduce) and (min-width: 900px) {
+  .steps::after { animation: cometX 3.5s linear infinite !important; transition: transform 2.2s cubic-bezier(.4,0,.2,1) !important; }
 }
