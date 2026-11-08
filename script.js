@@ -113,3 +113,31 @@ document.querySelectorAll(".marquee").forEach((row) => {
   copy.setAttribute("aria-hidden", "true");
   row.appendChild(copy);
 });
+
+// Things I've built: numbers count up when they scroll into view.
+const counters = document.querySelectorAll(".count");
+const fmt = (n) => n.toLocaleString("en-US");
+const runCount = (el) => {
+  const to = +el.dataset.to, pre = el.dataset.prefix || "", suf = el.dataset.suffix || "";
+  const t0 = performance.now(), dur = 1400;
+  const tick = (t) => {
+    const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+    el.textContent = pre + fmt(Math.round(to * e)) + suf;
+    if (k < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+};
+if ("IntersectionObserver" in window) {
+  const cObs = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (e.isIntersecting) { runCount(e.target); cObs.unobserve(e.target); }
+  }), { threshold: 0.6 });
+  counters.forEach((el) => cObs.observe(el));
+}
+// Spotlight that follows the mouse across each tile.
+document.querySelectorAll(".tile").forEach((tile) => {
+  tile.addEventListener("pointermove", (e) => {
+    const r = tile.getBoundingClientRect();
+    tile.style.setProperty("--mx", `${e.clientX - r.left}px`);
+    tile.style.setProperty("--my", `${e.clientY - r.top}px`);
+  });
+});

@@ -492,6 +492,41 @@ html:not(.js) .day-free { position: static; opacity: 1; transform: none; margin-
   @keyframes cometX { from { background-position: -140px 0, 0 0; } to { background-position: calc(100% + 140px) 0, 0 0; } }
 }
 
+/* Things I've built: bento grid */
+.bento { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 14px; grid-template-columns: 1fr; }
+.tile { position: relative; overflow: hidden; border-radius: 22px; border: 1px solid var(--border); background: var(--surface); padding: 22px; transition: border-color .3s, transform .3s var(--ease); }
+.tile::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s; background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(139,123,255,.18), transparent 60%); }
+.tile:hover { border-color: rgba(139,123,255,.45); transform: translateY(-3px); }
+.tile:hover::before { opacity: 1; }
+.tile article { position: relative; display: flex; flex-direction: column; gap: 10px; height: 100%; }
+.tile h3 { margin: 0; font-size: 1.2rem; }
+.tile p { margin: 0; color: var(--muted); }
+.tile-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.tile-ico { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; background: rgba(255,255,255,.06); font-size: 1.35rem; }
+.tile .when { margin: 0; text-align: right; }
+.tile .tag { margin: 0; }
+.big { display: grid; }
+.big .count { font-size: clamp(2.6rem, 9vw, 3.4rem); font-weight: 800; line-height: 1; letter-spacing: -.03em; background: linear-gradient(90deg, #fff, #c4bbff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.big small { color: var(--muted); font-size: .9rem; margin-top: 4px; }
+.minis { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.minis p { display: grid; padding: 10px 12px; border-radius: 14px; background: rgba(255,255,255,.04); border: 1px solid var(--border); }
+.minis b { color: #fff; font-size: 1.35rem; line-height: 1.1; }
+.minis small { font-size: .78rem; color: var(--muted); }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto !important; padding-top: 4px; }
+.pills span { font-size: .75rem; font-weight: 700; padding: 5px 10px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid var(--border); color: #d4d4e0; }
+.pills .pill-gold { background: rgba(253,224,71,.12); border-color: rgba(253,224,71,.4); color: #fde047; }
+.pills .pill-green { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.4); color: #6ee7b7; }
+.tile-live { border: 1px solid transparent; background: linear-gradient(#141428, #141428) padding-box, conic-gradient(from var(--ang, 0deg), var(--accent), #22d3ee, #fde047, var(--accent)) border-box; animation: spinBorder 6s linear infinite; }
+.tile-live .tile-top { justify-content: flex-start; }
+@property --ang { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+@keyframes spinBorder { to { --ang: 360deg; } }
+@media (min-width: 900px) {
+  .bento { grid-template-columns: repeat(3, 1fr); }
+  .tile-live { grid-column: span 2; }
+  .tile-live article { justify-content: center; }
+  .tile-live h3 { font-size: 1.6rem; }
+}
+
 /* Scroll reveal (only when JS runs, so content never stays hidden) */
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--d, 0) * 110ms); }
 .js .reveal.in { opacity: 1; transform: none; }
