@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Racha Jadayel | AI &amp; n8n Automation</title>
   <meta name="description" content="Racha Jadayel, AI product manager in Lisbon. I automate the repetitive work in your business. Book a free 30-minute automation audit.">
-  <meta name="theme-color" content="#4338ca">
+  <meta name="theme-color" content="#0b0b14">
 
   <!-- Social sharing -->
   <meta property="og:type" content="website">
@@ -18,42 +18,89 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 
-  <header class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Racha Jadayel · 0 to 1 product leader · AI automation</p>
-      <h1>I automate the repetitive work in your business, so you stop doing it by hand.</h1>
-      <p class="lead">Book a free 30-minute call and find out which of your tasks are worth automating first.</p>
-      <!-- TODO: paste your booking link into CALENDLY_URL in script.js. Until then this button opens an email. -->
-      <a class="btn js-book" href="mailto:jadayelracha@gmail.com?subject=Free%2030-min%20automation%20audit">Book a free 30-min audit</a>
+  <!-- Reusable line icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </svg>
+
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#top" aria-label="Racha Jadayel, back to top"><span>RJ</span></a>
+      <a class="btn btn-sm js-book" href="mailto:jadayelracha@gmail.com?subject=Free%2030-min%20automation%20audit">Book audit</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="grid-bg"></div>
+    </div>
+
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow reveal"><span class="dot"></span>Racha Jadayel · 0 to 1 product leader · AI automation</p>
+        <h1 class="reveal" style="--d:1">I automate the repetitive work in your business, so you <span class="grad">stop doing it by hand.</span></h1>
+        <p class="lead reveal" style="--d:2">Book a free 30-minute call and find out which of your tasks are worth automating first.</p>
+        <div class="reveal" style="--d:3">
+          <!-- TODO: paste your booking link into CALENDLY_URL in script.js. Until then this button opens an email. -->
+          <a class="btn btn-lg js-book" href="mailto:jadayelracha@gmail.com?subject=Free%2030-min%20automation%20audit">
+            Book a free 30-min audit <svg class="ico"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Animated illustration of an automation workflow -->
+      <div class="flow reveal" style="--d:2" aria-hidden="true">
+        <div class="flow-head"><span class="pulse"></span> Workflow running</div>
+        <div class="node n1"><span class="node-ico"><svg class="ico"><use href="#i-bolt"/></svg></span><div><b>New lead arrives</b><small>Website form</small></div></div>
+        <div class="wire"><i></i></div>
+        <div class="node n2"><span class="node-ico"><svg class="ico"><use href="#i-spark"/></svg></span><div><b>AI drafts a reply</b><small>Personal, in your tone</small></div></div>
+        <div class="wire"><i></i></div>
+        <div class="node n3"><span class="node-ico"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Reply sent, CRM updated</b><small>No copy and paste</small></div></div>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="section">
       <div class="wrap">
-        <h2>What I automate</h2>
+        <p class="kicker reveal">Services</p>
+        <h2 class="reveal">What I automate</h2>
         <div class="cards">
-          <article class="card">
-            <span class="icon" aria-hidden="true">📨</span>
+          <article class="card reveal" style="--d:0">
+            <span class="icon"><svg class="ico"><use href="#i-mail"/></svg></span>
             <h3>Lead follow-up</h3>
             <p>New leads get a reply, a reminder and a place in your CRM, without you copying anything across.</p>
           </article>
-          <article class="card">
-            <span class="icon" aria-hidden="true">💬</span>
+          <article class="card reveal" style="--d:1">
+            <span class="icon"><svg class="ico"><use href="#i-chat"/></svg></span>
             <h3>WhatsApp bots</h3>
             <p>Answer common questions, take bookings and match people to each other right inside WhatsApp.</p>
           </article>
-          <article class="card">
-            <span class="icon" aria-hidden="true">📊</span>
+          <article class="card reveal" style="--d:2">
+            <span class="icon"><svg class="ico"><use href="#i-chart"/></svg></span>
             <h3>Reporting</h3>
             <p>Numbers from your tools pulled together and sent to you on a schedule, instead of built by hand.</p>
           </article>
-          <article class="card">
-            <span class="icon" aria-hidden="true">📄</span>
+          <article class="card reveal" style="--d:3">
+            <span class="icon"><svg class="ico"><use href="#i-doc"/></svg></span>
             <h3>Document handling</h3>
             <p>Invoices, forms and PDFs read, sorted and filed by AI, with the key details pulled out for you.</p>
           </article>
@@ -61,19 +108,20 @@
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section">
       <div class="wrap">
-        <h2>How it works</h2>
+        <p class="kicker reveal">Process</p>
+        <h2 class="reveal">How it works</h2>
         <ol class="steps">
-          <li>
+          <li class="reveal" style="--d:0">
             <h3>Free audit</h3>
             <p>A 30-minute call where we look at your week and spot the tasks that repeat.</p>
           </li>
-          <li>
+          <li class="reveal" style="--d:1">
             <h3>I map and build your first workflow</h3>
             <p>We pick the one with the biggest payoff, and I design and build it in n8n with AI where it helps.</p>
           </li>
-          <li>
+          <li class="reveal" style="--d:2">
             <h3>You save hours every week</h3>
             <p>The work runs on its own, and you get that time back for the parts of the business only you can do.</p>
           </li>
@@ -83,25 +131,27 @@
 
     <section class="section">
       <div class="wrap">
-        <h2>Proof</h2>
-        <article class="feature">
-          <p class="tag">Live project</p>
+        <p class="kicker reveal">Proof</p>
+        <h2 class="reveal">Things I've built</h2>
+        <article class="feature reveal">
+          <p class="tag"><span class="pulse"></span> Live project</p>
           <h3>The Fourth Player</h3>
           <p>A live WhatsApp bot that matches padel players into games. I built it with n8n and AI. Message it and see it work.</p>
-          <a class="btn btn-outline" href="https://wa.me/351960393194" target="_blank" rel="noopener">Try it on WhatsApp</a>
+          <a class="btn btn-outline" href="https://wa.me/351960393194" target="_blank" rel="noopener">Try it on WhatsApp <svg class="ico"><use href="#i-arrow"/></svg></a>
         </article>
         <ul class="proof">
-          <li><strong>Pharmaklik</strong> A company I founded in Lebanon, with 2,000+ pharmacies.</li>
-          <li><strong>CompuGroup Medical &amp; Volkswagen Digital Solutions</strong> Product management work.</li>
-          <li><strong>Carnegie Mellon University</strong> Currently studying the advanced AI product management course.</li>
+          <li class="reveal" style="--d:0"><strong>Pharmaklik</strong> A company I founded in Lebanon, with 2,000+ pharmacies.</li>
+          <li class="reveal" style="--d:1"><strong>CompuGroup Medical &amp; Volkswagen Digital Solutions</strong> Product management work.</li>
+          <li class="reveal" style="--d:2"><strong>Carnegie Mellon University</strong> Currently studying the advanced AI product management course.</li>
         </ul>
       </div>
     </section>
 
-    <section class="section alt">
-      <div class="wrap about">
-        <img src="assets/photo.jpg" alt="Photo of Racha Jadayel" width="160" height="160" loading="lazy">
+    <section class="section">
+      <div class="wrap about reveal">
+        <div class="photo-ring"><img src="assets/photo.jpg" alt="Photo of Racha Jadayel" width="160" height="160" loading="lazy"></div>
         <div>
+          <p class="kicker">About</p>
           <h2>About me</h2>
           <p>I'm Racha, an AI product manager based in Lisbon.</p>
           <p>I founded Pharmaklik and did product work at CompuGroup Medical and Volkswagen Digital Solutions.</p>
@@ -110,12 +160,14 @@
       </div>
     </section>
 
-    <section class="section cta">
+    <section class="section">
       <div class="wrap">
-        <h2>Let's find your first automation</h2>
-        <p class="lead">30 minutes, free, no strings attached.</p>
-        <a class="btn btn-light js-book" href="mailto:jadayelracha@gmail.com?subject=Free%2030-min%20automation%20audit">Book a free 30-min audit</a>
-        <p class="links"><a href="https://www.linkedin.com/in/rashajadayel" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
+        <div class="cta reveal">
+          <h2>Let's find your first automation</h2>
+          <p class="lead">30 minutes, free, no strings attached.</p>
+          <a class="btn btn-light btn-lg js-book" href="mailto:jadayelracha@gmail.com?subject=Free%2030-min%20automation%20audit">Book a free 30-min audit <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <p class="links"><a href="https://www.linkedin.com/in/rashajadayel" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
+        </div>
       </div>
     </section>
   </main>
