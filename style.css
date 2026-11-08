@@ -309,7 +309,7 @@ a { color: var(--accent); }
 .marquee.rev .track { animation-direction: reverse; animation-duration: 50s; }
 .marquee:hover .track { animation-play-state: paused; }
 .chip { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; padding: 10px 18px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); font-weight: 600; font-size: .95rem; color: var(--text); }
-.chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #22d3ee); }
+.chip::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c, var(--accent)); box-shadow: 0 0 0 2px rgba(255,255,255,.06); flex: none; }
 @keyframes scrollX { to { transform: translateX(-100%); } }
 
 /* Scroll reveal (only when JS runs, so content never stays hidden) */
