@@ -45,7 +45,9 @@ a { color: var(--accent); }
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
   color: #fff; font-weight: 800; text-decoration: none; font-size: .95rem;
 }
-.logo { text-decoration: none; }
+.logo { text-decoration: none; display: block; width: 44px; height: 44px; border-radius: 50%; padding: 2px; background: linear-gradient(135deg, var(--accent), #22d3ee); transition: transform .25s var(--ease); }
+.logo:hover { transform: scale(1.06); }
+.logo img { display: block; width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg); }
 
 /* Buttons */
 .btn {
