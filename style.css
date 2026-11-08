@@ -195,7 +195,19 @@ a { color: var(--accent); }
 }
 .steps p { color: var(--muted); margin: 0; }
 .steps-lead { font-size: clamp(1.2rem, 4vw, 1.6rem); font-weight: 700; color: var(--text); margin: -4px 0 8px; }
+.steps-lead { position: relative; isolation: isolate; }
 .steps-lead b { color: #fcd34d; }
+.hl { position: relative; white-space: nowrap; }
+.hl::after { content: ""; position: absolute; left: -4px; right: -4px; bottom: .02em; height: .42em; z-index: -1; border-radius: 4px; background: linear-gradient(90deg, rgba(252,211,77,.45), rgba(245,158,11,.3)); transform: skewX(-8deg); }
+.js .hl::after { transform: skewX(-8deg) scaleX(0); transform-origin: left; transition: transform .7s var(--ease) .5s; }
+.js .steps-lead.in .hl::after { transform: skewX(-8deg) scaleX(1); }
+.typing { display: inline-block; white-space: nowrap; vertical-align: bottom; overflow: hidden; }
+.js .typing { max-width: 0; transition: max-width 1.6s steps(24, end) 1.3s; }
+.js .steps-lead.in .typing { max-width: 13em; }
+.caret { display: inline-block; width: 3px; height: 1em; margin-left: 4px; vertical-align: -0.12em; background: #22d3ee; border-radius: 2px; opacity: 0; }
+.js .steps-lead.in .caret { animation: caretBlink .8s steps(1) 1.3s 6, caretOut .3s 6.1s forwards; }
+@keyframes caretBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes caretOut { to { opacity: 0; } }
 .step-human::before { background: linear-gradient(135deg, #fcd34d, #f59e0b) !important; border-color: #fcd34d !important; color: #1a1300 !important; box-shadow: 0 0 24px -4px #fcd34d !important; }
 .step-human .step-tag { color: #fcd34d; }
 .step-tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #67e8f9; margin-bottom: 6px; }
