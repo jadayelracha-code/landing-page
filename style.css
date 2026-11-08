@@ -23,7 +23,7 @@ body {
 }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
 h1, h2, h3 { line-height: 1.15; margin: 0 0 .5em; letter-spacing: -0.02em; }
-h1 { font-size: clamp(2.1rem, 7vw, 3.6rem); font-weight: 800; }
+h1 { font-size: clamp(1.9rem, 6.4vw, 3.3rem); font-weight: 800; }
 h2 { font-size: clamp(1.7rem, 5vw, 2.5rem); font-weight: 800; }
 h3 { font-size: 1.15rem; font-weight: 700; }
 p { margin: 0 0 1em; }
@@ -104,6 +104,16 @@ a { color: var(--accent); }
   padding: 6px 14px; border-radius: 999px; margin-bottom: 1.4em;
 }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: #34d399; box-shadow: 0 0 0 0 rgba(52,211,153,.6); animation: ping 2s infinite; }
+
+/* Name and role at the top of the hero */
+.intro { margin-bottom: 28px; padding-left: 16px; border-left: 3px solid var(--accent); }
+.intro-name { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 0; font-size: clamp(1.6rem, 5.5vw, 2.2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; color: #fff; }
+.intro-role {
+  margin: 6px 0 0; font-size: clamp(1.15rem, 4vw, 1.5rem); font-weight: 700; line-height: 1.3;
+  background: linear-gradient(90deg, #c4bbff, #67e8f9); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.avail { display: inline-flex; align-items: center; gap: 8px; font-size: .78rem; font-weight: 600; letter-spacing: 0; color: #6ee7b7; background: rgba(52,211,153,.1); border: 1px solid rgba(52,211,153,.25); padding: 4px 12px; border-radius: 999px; }
+
 .lead { font-size: 1.15rem; color: var(--muted); max-width: 36em; margin-bottom: 1.6em; }
 .grad {
   background: linear-gradient(90deg, #a99cff, #22d3ee, #a99cff);
