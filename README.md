@@ -15,6 +15,8 @@ Plain HTML, CSS and a little JS. No framework, no build step.
 | `script.js` | The booking link setting |
 | `assets/photo.jpg` | Placeholder photo. Replace it with your own square photo, same filename |
 | `assets/qr.png` | QR code pointing to the live URL, ready to print |
+| `assets/og-image.jpg` | 1200×630 image shown when the link is shared |
+| `sitemap.xml` | Sitemap to submit in Google Search Console |
 | `assets/favicon*.png`, `assets/apple-touch-icon.png` | Browser and phone icons |
 
 ## Add your Calendly link
