@@ -31,7 +31,17 @@ Plain HTML, CSS and a little JS. No framework, no build step.
 | `assets/qr.png` | QR code pointing to the live URL, ready to print |
 | `assets/cmu-portugal-academy.png` | CMU Portugal Academy logo |
 | `assets/favicon*.png`, `assets/apple-touch-icon.png` | Browser and phone icons |
-| `sitemap.xml` | Sitemap to submit in Google Search Console |
+| `assets/icons.svg` | All line and brand icons (one file, referenced by the page) |
+| `sitemap.xml` | Sitemap with image entries, to submit in Google Search Console |
+| `robots.txt` | Allows search engines and AI crawlers. Only takes effect at a domain root, so after the custom domain is set up |
+| `llms.txt` | Plain-text summary for AI tools (an emerging, optional convention) |
+
+## AI search (GEO) setup
+
+- **Structured data:** one connected JSON-LD `@graph` in `index.html`: WebSite, ProfilePage, Person, ProfessionalService (services, areas served, free intro call offer), the ventures and employers, and an FAQPage that mirrors the visible FAQ word for word. Keep the two in sync when editing the FAQ.
+- **Answer-first content:** each main section has an H2 followed by a short answer paragraph; the FAQ uses question headings with 2 to 3 sentence answers.
+- **Facts in one place:** the "Track record at a glance" table holds the key numbers.
+- **No-JS friendly:** all text and the booking link are in the HTML itself. JavaScript only adds animation.
 
 ## Change the booking link
 
@@ -43,16 +53,16 @@ Open `script.js` and edit line 3:
 const CALENDLY_URL = "https://calendly.com/jadayelracha/30min-free-call";
 ```
 
-Every **Book a free intro call** button uses this link. If it is set back to `https://calendly.com/YOUR-LINK`, the buttons fall back to an email to jadayelracha@gmail.com.
+Also replace the same link in `index.html` (buttons, FAQ and structured data), so crawlers that do not run JavaScript see it too. Every **Book a free intro call** button uses this link. If it is set back to `https://calendly.com/YOUR-LINK`, the buttons fall back to an email to jadayelracha@gmail.com.
 
 ## After an update
 
-Files are loaded with a version number (`style.css?v=58`). Raise the number in `index.html` after changing CSS or JS, so browsers load the new files instead of an old saved copy.
+Files are loaded with a version number (`style.css?v=59`). Raise the number in `index.html` after changing CSS or JS, so browsers load the new files instead of an old saved copy.
 
 ## Moving to a custom domain
 
 1. Add the domain in **Settings → Pages → Custom domain** and set up DNS as GitHub describes.
-2. Replace `https://jadayelracha-code.github.io/landing-page/` everywhere in `index.html` (canonical, Open Graph, X, structured data) and in `sitemap.xml`.
+2. Replace `https://jadayelracha-code.github.io/landing-page/` everywhere in `index.html` (canonical, Open Graph, X, structured data), `sitemap.xml`, `robots.txt` and `llms.txt`.
 3. Regenerate `assets/qr.png` for the new address.
 
 ## Preview locally

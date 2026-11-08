@@ -1,0 +1,41 @@
+# Racha Jadayel
+
+> 0 to 1 product builder and AI automation consultant based in Lisbon, Portugal. Pharmacist turned founder turned product builder. Helps startups and freelancers automate and accelerate their work with AI agents, n8n and MCP. Works with clients in Portugal and internationally, with a focus on the GCC region. Offers a free 30-minute intro call.
+
+## Key facts
+
+- Name: Racha Jadayel (also written Rasha Jadayel)
+- Role: 0 to 1 Product Builder & AI Automation Consultant; Product Owner, AI at CompuGroup Medical (2025–now)
+- Location: Lisbon, Portugal; works remotely with clients in Portugal and the GCC (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman)
+- Approach: human-led discovery first, AI agents do the delivery, evals check the output where it matters
+- Booking: https://calendly.com/jadayelracha/30min-free-call
+- LinkedIn: https://www.linkedin.com/in/rashajadayel
+
+## Services
+
+- Lead follow-up automation
+- WhatsApp bots (questions, bookings, matchmaking)
+- Automated reporting
+- Document handling (invoices, forms, PDFs)
+- MCP setup: one AI agent connected to Jira, Confluence, Miro, GitHub, Figma, Notion and more
+
+## Track record
+
+- Pharmaklik, Founder (2017–2022): Flat6Labs-backed platform digitizing Lebanon's pharmacy supply chain; 2,000+ pharmacies (~70% of the national market) at ~$1 acquisition cost each
+- Saydale.com, Founder (2020–2022): non-profit platform helping patients in Lebanon find medicines during the national shortage; 20,000+ patient requests in 6 months; Berytech Healthcare Initiative 2020 award
+- Volkswagen Digital Solutions, Product Manager (2022–2025)
+- CompuGroup Medical, Product Owner AI (2025–now)
+- The Fourth Player, Founder (2026–now): live WhatsApp padel matchmaking bot built with n8n and AI — https://thefourthplayer.com/
+
+## Education & credentials
+
+- AI Product Management Advanced Program, Carnegie Mellon University Portugal (CMU Portugal Academy), 2026–2027, in progress
+- TechWomen Fellow, U.S. Department of State, 2020–2021
+
+## Tools
+
+n8n, Claude, Devin, Windsurf, WhatsApp APIs, Facebook Business APIs, Supabase, Google Workspace, Notion, Mixpanel, Jira, Confluence, Miro, GitHub, Canva, Figma, Maze
+
+## Pages
+
+- [Home](https://jadayelracha-code.github.io/landing-page/): full profile, services, use cases, process, track record and FAQ

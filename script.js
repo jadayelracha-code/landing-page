@@ -97,3 +97,13 @@ if (steps) {
     }, { threshold: 0.4 }).observe(steps);
   }
 }
+
+// Tools strip: the HTML lists each tool once; copies for the endless loop are made here.
+document.querySelectorAll(".marquee").forEach((row) => {
+  const track = row.querySelector(".track");
+  const items = track.innerHTML;
+  track.innerHTML = items + items + items;
+  const copy = track.cloneNode(true);
+  copy.setAttribute("aria-hidden", "true");
+  row.appendChild(copy);
+});
