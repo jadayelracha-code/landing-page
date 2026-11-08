@@ -15,14 +15,14 @@
   <meta property="og:image" content="https://jadayelracha-code.github.io/landing-page/assets/photo.jpg">
   <meta name="twitter:card" content="summary">
 
-  <link rel="icon" href="assets/favicon-32.png?v=17" type="image/png" sizes="32x32">
-  <link rel="icon" href="assets/favicon.png?v=17" type="image/png" sizes="64x64">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=17">
+  <link rel="icon" href="assets/favicon-32.png?v=19" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/favicon.png?v=19" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=19">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=17">
+  <link rel="stylesheet" href="style.css?v=19">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -137,8 +137,8 @@
       <div class="wrap mcp">
         <div class="mcp-copy">
           <p class="kicker reveal">AI + your tools</p>
-          <h2 class="reveal">Connect your AI assistant to the tools your team already uses</h2>
-          <p class="reveal" style="--d:1">I set up MCP (Model Context Protocol) connections so AI assistants like Claude can work directly with Jira, Confluence, Miro, GitHub and more. Ask in plain language, and it pulls the ticket, reads the page or updates the board for you.</p>
+          <h2 class="reveal">Connect all your tools to one AI agent</h2>
+          <p class="reveal" style="--d:1">I set up MCP (Model Context Protocol) connections so one AI agent, like Devin or Claude, can work across Jira, Confluence, Miro, GitHub, Figma, Notion and more. Ask once in plain language, and it pulls the ticket, reads the page or updates the board for you.</p>
           <ul class="ticks">
             <li class="reveal" style="--d:2"><svg class="ico"><use href="#i-check"/></svg> Configured for your team's tools and workflows</li>
             <li class="reveal" style="--d:3"><svg class="ico"><use href="#i-check"/></svg> Access set up with the right permissions</li>
@@ -146,20 +146,16 @@
           </ul>
         </div>
 
-        <!-- Animated illustration: AI assistant connected to work tools -->
+        <!-- Animated illustration: every tool plugs into one AI agent through MCP -->
         <div class="hub reveal" style="--d:2" aria-hidden="true">
-          <div class="prompt"><span class="typed">Summarise this sprint's open Jira bugs on our Miro board</span></div>
-          <div class="hub-core">
-            <span class="ring r1"></span><span class="ring r2"></span>
-            <span class="core"><svg class="ico"><use href="#i-spark"/></svg> AI assistant</span>
+          <p class="hub-title">One AI agent. All your tools.</p>
+          <div class="mcp-map">
+            <svg class="mcp-lines" viewBox="0 0 100 100"><path id="mcp-l0" d="M50 13 L50 50"/><path id="mcp-l1" d="M82 31 L50 50"/><path id="mcp-l2" d="M82 69 L50 50"/><path id="mcp-l3" d="M50 87 L50 50"/><path id="mcp-l4" d="M18 69 L50 50"/><path id="mcp-l5" d="M18 31 L50 50"/><circle r="1.3" class="packet" opacity="0"><animateMotion dur="6s" begin="0s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.15;1" calcMode="linear"><mpath href="#mcp-l0"/></animateMotion><animate attributeName="opacity" dur="6s" begin="0s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.15;0.16;1"/></circle><circle r="1.3" class="packet" opacity="0"><animateMotion dur="6s" begin="1s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.15;1" calcMode="linear"><mpath href="#mcp-l1"/></animateMotion><animate attributeName="opacity" dur="6s" begin="1s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.15;0.16;1"/></circle><circle r="1.3" class="packet" opacity="0"><animateMotion dur="6s" begin="2s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.15;1" calcMode="linear"><mpath href="#mcp-l2"/></animateMotion><animate attributeName="opacity" dur="6s" begin="2s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.15;0.16;1"/></circle><circle r="1.3" class="packet" opacity="0"><animateMotion dur="6s" begin="3s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.15;1" calcMode="linear"><mpath href="#mcp-l3"/></animateMotion><animate attributeName="opacity" dur="6s" begin="3s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.15;0.16;1"/></circle><circle r="1.3" class="packet" opacity="0"><animateMotion dur="6s" begin="4s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.15;1" calcMode="linear"><mpath href="#mcp-l4"/></animateMotion><animate attributeName="opacity" dur="6s" begin="4s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.15;0.16;1"/></circle><circle r="1.3" class="packet" opacity="0"><animateMotion dur="6s" begin="5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.15;1" calcMode="linear"><mpath href="#mcp-l5"/></animateMotion><animate attributeName="opacity" dur="6s" begin="5s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.15;0.16;1"/></circle></svg>
+            <span class="mring"></span>
+            <span class="mcore"><b>Devin</b><small>your AI agent</small></span>
+            <span class="mnode" style="left:50%;top:13%;--i:0">Jira</span><span class="mnode" style="left:82%;top:31%;--i:1">Confluence</span><span class="mnode" style="left:82%;top:69%;--i:2">Miro</span><span class="mnode" style="left:50%;top:87%;--i:3">GitHub</span><span class="mnode" style="left:18%;top:69%;--i:4">Figma</span><span class="mnode" style="left:18%;top:31%;--i:5">Notion</span>
           </div>
-          <div class="tools">
-            <span class="tool" style="--i:0">Jira</span>
-            <span class="tool" style="--i:1">Confluence</span>
-            <span class="tool" style="--i:2">Miro</span>
-            <span class="tool" style="--i:3">GitHub</span>
-            <span class="tool more" style="--i:4">+ your tools</span>
-          </div>
+          <p class="legend"><span class="legend-line"></span> MCP connection</p>
         </div>
       </div>
     </section>
@@ -224,7 +220,7 @@
           <h2>About me</h2>
           <p>I'm Racha, an AI product builder based in Lisbon.</p>
           <p>I founded Pharmaklik and did product work at CompuGroup Medical and Volkswagen Digital Solutions.</p>
-          <p>Now I help startups and freelancers hand their repetitive work to AI and n8n.</p>
+          <p>Now I help startups and freelancers automate and accelerate their work.</p>
         </div>
       </div>
     </section>
@@ -245,6 +241,6 @@
     <div class="wrap">© <span id="year">2026</span> Racha Jadayel · Lisbon</div>
   </footer>
 
-  <script src="script.js?v=17" defer></script>
+  <script src="script.js?v=19" defer></script>
 </body>
 </html>
