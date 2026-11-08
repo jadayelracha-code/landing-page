@@ -423,6 +423,21 @@ html:not(.js) .note { opacity: .25; }
 .js .play .day-free { opacity: 1; transform: none; }
 html:not(.js) .day-free { position: static; opacity: 1; transform: none; margin-top: 8px; padding: 16px; }
 
+
+/* How it works: scroll-driven timeline */
+.steps::after { content: ""; position: absolute; left: 21px; top: 12px; width: 2px; height: calc(var(--p, 0) * (100% - 24px)); background: linear-gradient(#fde047, var(--accent), #22d3ee); box-shadow: 0 0 12px rgba(139,123,255,.8); border-radius: 2px; }
+.steps::after { z-index: 1; }
+.steps li::before { z-index: 2; }
+.js .steps li::before { opacity: .35; transform: scale(.82); transition: opacity .4s, transform .4s var(--ease); }
+.js .steps li.lit::before { opacity: 1; transform: scale(1); animation: stepPop .55s var(--ease); }
+@keyframes stepPop { 0% { transform: scale(.82); } 55% { transform: scale(1.22); } 100% { transform: scale(1); } }
+.js .steps li > * { transition: opacity .5s var(--ease), transform .5s var(--ease); }
+.js .steps li:not(.lit) > * { opacity: .35; transform: translateX(12px); }
+@media (min-width: 900px) {
+  .steps::after { left: 22px; right: auto; top: 21px; height: 2px; width: calc(100% - 44px); background: linear-gradient(90deg, #fde047, var(--accent), #22d3ee); transform-origin: left; transform: scaleX(var(--p, 0)); transition: transform 2.2s cubic-bezier(.4,0,.2,1); }
+  .js .steps li:not(.lit) > * { transform: translateY(10px); }
+}
+
 /* Scroll reveal (only when JS runs, so content never stays hidden) */
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--d, 0) * 110ms); }
 .js .reveal.in { opacity: 1; transform: none; }

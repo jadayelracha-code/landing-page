@@ -67,3 +67,33 @@ if (uc && "IntersectionObserver" in window) {
 } else if (uc) {
   panels.forEach((p) => p.classList.add("play"));
 }
+
+// How it works: the timeline fills as you scroll and each step lights up.
+const steps = document.querySelector(".steps");
+if (steps) {
+  const items = [...steps.querySelectorAll("li")];
+  const desktop = window.matchMedia("(min-width: 900px)");
+  const lightAll = () => { steps.style.setProperty("--p", 1); items.forEach((li) => li.classList.add("lit")); };
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+    lightAll();
+  } else {
+    let started = false;
+    const onScroll = () => {
+      if (desktop.matches) return;
+      const r = steps.getBoundingClientRect();
+      const mark = window.innerHeight * 0.6;
+      const p = Math.min(1, Math.max(0, (mark - r.top) / r.height));
+      steps.style.setProperty("--p", p.toFixed(3));
+      items.forEach((li) => li.classList.toggle("lit", li.getBoundingClientRect().top + 20 < mark));
+    };
+    window.addEventListener("scroll", () => requestAnimationFrame(onScroll), { passive: true });
+    onScroll();
+    new IntersectionObserver((entries, obs) => {
+      if (!entries[0].isIntersecting || !desktop.matches || started) return;
+      started = true;
+      steps.style.setProperty("--p", 1);
+      items.forEach((li, i) => setTimeout(() => li.classList.add("lit"), 250 + i * 420));
+      obs.disconnect();
+    }, { threshold: 0.4 }).observe(steps);
+  }
+}
