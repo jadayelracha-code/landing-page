@@ -360,6 +360,7 @@ a { color: var(--accent); }
 
 /* Behind the scenes column */
 .uc-panel { display: grid; gap: 24px; }
+.uc-panel[hidden] { display: none; }
 .uc-demo { min-width: 0; }
 .uc-side h3 { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
 .uc-side ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
