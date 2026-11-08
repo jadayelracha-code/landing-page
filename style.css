@@ -328,6 +328,9 @@ a { color: var(--accent); }
   .proof { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 900px) {
+  .proof { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 900px) {
   .hero { padding: 96px 0 110px; }
   .hero-inner { grid-template-columns: 1.25fr 1fr; gap: 56px; }
   .cards { grid-template-columns: repeat(4, 1fr); }
