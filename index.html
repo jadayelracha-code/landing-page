@@ -67,14 +67,26 @@
         </div>
       </div>
 
-      <!-- Animated illustration of an automation workflow -->
+      <!-- Animated illustration: work runs on its own, the owner only makes the key decision -->
       <div class="flow reveal" style="--d:2" aria-hidden="true">
-        <div class="flow-head"><span class="pulse"></span> Workflow running</div>
-        <div class="node n1"><span class="node-ico"><svg class="ico"><use href="#i-bolt"/></svg></span><div><b>New lead arrives</b><small>Website form</small></div></div>
-        <div class="wire"><i></i></div>
-        <div class="node n2"><span class="node-ico"><svg class="ico"><use href="#i-spark"/></svg></span><div><b>AI drafts a reply</b><small>Personal, in your tone</small></div></div>
-        <div class="wire"><i></i></div>
-        <div class="node n3"><span class="node-ico"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Reply sent, CRM updated</b><small>No copy and paste</small></div></div>
+        <div class="flow-head"><span class="pulse"></span> Running for you while you focus</div>
+        <p class="flow-label">Done for you</p>
+        <ul class="done-list">
+          <li class="task t1"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span><div><b>New leads answered</b><small>Replies sent in your tone</small></div></li>
+          <li class="task t2"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Invoices read and filed</b><small>Key details saved for you</small></div></li>
+          <li class="task t3"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Weekly report ready</b><small>Waiting in your inbox</small></div></li>
+        </ul>
+        <div class="approve">
+          <p class="flow-label accent">Needs your OK</p>
+          <b>Proposal for a new client</b>
+          <small>Drafted by AI from your call notes</small>
+          <div class="actions">
+            <span class="b-edit">Edit</span>
+            <span class="b-ok">Approve<i class="tap"></i></span>
+          </div>
+          <div class="approved"><svg class="ico"><use href="#i-check"/></svg> Approved and sent</div>
+        </div>
+        <p class="flow-foot"><b>You decide.</b> Everything else runs on its own.</p>
       </div>
     </div>
   </header>
@@ -181,7 +193,7 @@
     <section class="section learning-section">
       <div class="wrap">
         <article class="learning reveal">
-          <span class="learning-ico"><svg class="ico"><use href="#i-book"/></svg></span>
+          <span class="learning-ico" aria-hidden="true">CMU</span>
           <div>
             <p class="kicker">Currently learning</p>
             <h3>Carnegie Mellon University</h3>
