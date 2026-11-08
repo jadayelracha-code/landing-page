@@ -438,16 +438,6 @@ html:not(.js) .day-free { position: static; opacity: 1; transform: none; margin-
 /* GEO / answer-first additions */
 .section-answer { color: var(--muted); max-width: 46em; font-size: 1.05rem; }
 .edu-title { font-size: clamp(1.3rem, 4vw, 1.6rem); margin-bottom: 18px; }
-.facts { margin-top: 28px; }
-.facts-title { font-size: 1.15rem; margin-bottom: 12px; }
-.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; }
-.facts table { width: 100%; border-collapse: collapse; font-size: .92rem; min-width: 560px; }
-.facts th, .facts td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
-.facts thead th { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); background: rgba(255,255,255,.03); }
-.facts tbody th { color: var(--text); font-weight: 700; }
-.facts td { color: var(--muted); }
-.facts td:nth-child(2) { white-space: nowrap; }
-.facts tbody tr:last-child th, .facts tbody tr:last-child td { border-bottom: 0; }
 .quote { margin: 20px 0 0; padding: 16px 20px; border-left: 3px solid #fde047; background: rgba(253,224,71,.06); border-radius: 0 14px 14px 0; }
 .quote p { color: var(--text); font-style: italic; margin: 0 0 8px; }
 .quote footer { color: #fde047; font-weight: 700; font-size: .9rem; }

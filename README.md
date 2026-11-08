@@ -40,7 +40,7 @@ Plain HTML, CSS and a little JS. No framework, no build step.
 
 - **Structured data:** one connected JSON-LD `@graph` in `index.html`: WebSite, ProfilePage, Person, ProfessionalService (services, areas served, free intro call offer), the ventures and employers, and an FAQPage that mirrors the visible FAQ word for word. Keep the two in sync when editing the FAQ.
 - **Answer-first content:** each main section has an H2 followed by a short answer paragraph; the FAQ uses question headings with 2 to 3 sentence answers.
-- **Facts in one place:** the "Track record at a glance" table holds the key numbers.
+- **Facts in one place:** the key numbers sit in the "Things I've built" cards and in `llms.txt`.
 - **No-JS friendly:** all text and the booking link are in the HTML itself. JavaScript only adds animation.
 
 ## Change the booking link
@@ -57,7 +57,7 @@ Also replace the same link in `index.html` (buttons, FAQ and structured data), s
 
 ## After an update
 
-Files are loaded with a version number (`style.css?v=59`). Raise the number in `index.html` after changing CSS or JS, so browsers load the new files instead of an old saved copy.
+Files are loaded with a version number (`style.css?v=61`). Raise the number in `index.html` after changing CSS or JS, so browsers load the new files instead of an old saved copy.
 
 ## Moving to a custom domain
 
