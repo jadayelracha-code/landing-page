@@ -210,6 +210,9 @@ a { color: var(--accent); }
 .proof li { padding: 18px 20px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); color: var(--muted); transition: border-color .3s; }
 .proof li:hover { border-color: rgba(139,123,255,.45); }
 .proof strong { color: var(--text); display: block; }
+.proof li { display: flex; gap: 16px; align-items: flex-start; }
+.proof-ico { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; background: var(--accent-soft); color: #c4bbff; font-size: 1.35rem; flex: none; transition: transform .35s var(--ease); }
+.proof li:hover .proof-ico { transform: rotate(-8deg) scale(1.08); }
 .when { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
 
 /* About */
