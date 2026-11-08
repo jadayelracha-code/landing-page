@@ -15,14 +15,14 @@
   <meta property="og:image" content="https://jadayelracha-code.github.io/landing-page/assets/photo.jpg">
   <meta name="twitter:card" content="summary">
 
-  <link rel="icon" href="assets/favicon-32.png?v=47" type="image/png" sizes="32x32">
-  <link rel="icon" href="assets/favicon.png?v=47" type="image/png" sizes="64x64">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=47">
+  <link rel="icon" href="assets/favicon-32.png?v=51" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/favicon.png?v=51" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=51">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=47">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=51">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -89,20 +89,23 @@
         </div>
       </div>
 
-      <!-- Animated illustration: work runs on its own, you only make the key decision -->
-      <div class="flow reveal" style="--d:2" aria-hidden="true">
-        <div class="flow-head"><span class="pulse"></span> Running on autopilot</div>
-        <div class="auto">
-          <div class="auto-item t1"><span class="auto-ico"><svg class="ico"><use href="#i-mail"/></svg><i class="badge"><svg class="ico"><use href="#i-check"/></svg></i></span>Leads</div>
-          <div class="auto-item t2"><span class="auto-ico"><svg class="ico"><use href="#i-doc"/></svg><i class="badge"><svg class="ico"><use href="#i-check"/></svg></i></span>Invoices</div>
-          <div class="auto-item t3"><span class="auto-ico"><svg class="ico"><use href="#i-chart"/></svg><i class="badge"><svg class="ico"><use href="#i-check"/></svg></i></span>Reports</div>
+      <!-- Hero card: a prescription for your business (pharmacist turned product builder) -->
+      <div class="rx reveal" style="--d:2" role="img" aria-label="A prescription for your business. Diagnosis: manual follow-ups and copy-paste reports. Prescription: one AI agent plus an n8n workflow. Dosage: runs every morning. Side effects: free time. Signed Racha J.">
+        <div class="rx-top">
+          <span class="rx-symbol">℞</span>
+          <div class="rx-doc"><b>Racha Jadayel</b><span>Pharmacist turned product builder · Lisbon</span></div>
         </div>
-        <div class="approve">
-          <span class="approve-text">Proposal ready</span>
-          <span class="b-ok">Approve<i class="tap"></i></span>
-          <span class="approved"><svg class="ico"><use href="#i-check"/></svg> Sent</span>
+        <dl class="rx-lines">
+          <div class="rx-line" style="--i:0"><dt>Patient</dt><dd>Your business</dd></div>
+          <div class="rx-line" style="--i:1"><dt>Diagnosis</dt><dd>Manual follow-ups, copy-paste reports</dd></div>
+          <div class="rx-line" style="--i:2"><dt>Prescription</dt><dd>1 AI agent + n8n workflow</dd></div>
+          <div class="rx-line" style="--i:3"><dt>Dosage</dt><dd>Runs every morning</dd></div>
+          <div class="rx-line" style="--i:4"><dt>Side effects</dt><dd>Free time ☕</dd></div>
+        </dl>
+        <div class="rx-sign">
+          <span class="rx-sign-name">Racha J.</span>
+          <svg class="rx-swoosh" viewBox="0 0 160 24" aria-hidden="true"><path d="M4 16 C 40 4, 70 22, 100 12 S 150 6, 156 14"/></svg>
         </div>
-        <p class="flow-foot"><b>You decide.</b> AI does the rest.</p>
       </div>
     </div>
   </header>
@@ -149,6 +152,73 @@
             <h3>Document handling</h3>
             <p>Invoices, forms and PDFs read, sorted and filed by AI, with the key details pulled out for you.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="use-cases">
+      <div class="wrap">
+        <p class="kicker reveal">Use cases</p>
+        <h2 class="reveal">See it in action</h2>
+        <p class="uc-sub reveal" style="--d:1">A few ways AI takes work off your plate. Illustrative examples.</p>
+        <div class="uc reveal" style="--d:2">
+          <div class="uc-tabs" role="tablist" aria-label="Use cases">
+            <button class="uc-tab" role="tab" aria-selected="true" aria-controls="uc-chat" id="tab-chat">💬 Chat with your agent</button>
+            <button class="uc-tab" role="tab" aria-selected="false" aria-controls="uc-calm" id="tab-calm">🌪️ Chaos to calm</button>
+            <button class="uc-tab" role="tab" aria-selected="false" aria-controls="uc-log" id="tab-log">🖥️ Watch it work</button>
+            <button class="uc-tab" role="tab" aria-selected="false" aria-controls="uc-day" id="tab-day">☕ Your morning, rewritten</button>
+          </div>
+
+          <div class="uc-panel" role="tabpanel" id="uc-chat" aria-labelledby="tab-chat">
+            <div class="chat">
+              <div class="chat-head"><span class="chat-av">AI</span><div><b>Your AI agent</b><small>online</small></div></div>
+              <div class="chat-body">
+                <p class="msg out" style="--t:0">Send the proposal to the new client 📎</p>
+                <p class="msg in typing-dots" style="--t:1"><i></i><i></i><i></i></p>
+                <p class="msg in" style="--t:2">Done ✅ Pulled your call notes from Notion, drafted the proposal and updated Jira.</p>
+                <p class="msg in" style="--t:3">Want me to book a follow-up for Thursday?</p>
+                <p class="msg out" style="--t:4">Yes 👍</p>
+              </div>
+            </div>
+            <p class="uc-caption">One message from you. Everything else handled.</p>
+          </div>
+
+          <div class="uc-panel" role="tabpanel" id="uc-calm" aria-labelledby="tab-calm" hidden>
+            <div class="calm">
+              <span class="note" style="--x:6%;--y:10%;--r:-6deg;--t:0">Reply to lead!</span>
+              <span class="note" style="--x:55%;--y:6%;--r:5deg;--t:1">Invoice #?</span>
+              <span class="note" style="--x:30%;--y:30%;--r:-3deg;--t:2">Weekly report</span>
+              <span class="note" style="--x:62%;--y:38%;--r:7deg;--t:3">Update CRM</span>
+              <span class="note" style="--x:4%;--y:52%;--r:4deg;--t:4">Chase payment</span>
+              <span class="note" style="--x:40%;--y:62%;--r:-7deg;--t:5">Copy data to sheet</span>
+              <span class="note" style="--x:12%;--y:78%;--r:-2deg;--t:6">Follow up!!</span>
+              <div class="calm-card"><b>✓ All handled</b><span>1 decision needs you</span></div>
+            </div>
+            <p class="uc-caption">From a pile of to-dos to one decision.</p>
+          </div>
+
+          <div class="uc-panel" role="tabpanel" id="uc-log" aria-labelledby="tab-log" hidden>
+            <div class="term">
+              <div class="term-head"><i></i><i></i><i></i><span>agent.log</span></div>
+              <p class="ln" style="--t:0"><span class="c-mut">$</span> new lead from website form</p>
+              <p class="ln" style="--t:1"><span class="c-acc">→</span> reading CRM history…</p>
+              <p class="ln" style="--t:2"><span class="c-acc">→</span> drafting reply in your tone…</p>
+              <p class="ln" style="--t:3"><span class="c-acc">→</span> running evals <span class="c-ok">✓ tone ✓ facts ✓ privacy</span></p>
+              <p class="ln" style="--t:4"><span class="c-warn">⏸</span> waiting for your OK<span class="term-caret"></span></p>
+            </div>
+            <p class="uc-caption">Transparent, tested, and you approve.</p>
+          </div>
+
+          <div class="uc-panel" role="tabpanel" id="uc-day" aria-labelledby="tab-day" hidden>
+            <div class="day">
+              <div class="slot" style="--t:0"><time>08:00</time><span class="blk">Inbox triage</span></div>
+              <div class="slot" style="--t:1"><time>09:00</time><span class="blk">Copy leads to CRM</span></div>
+              <div class="slot" style="--t:2"><time>10:00</time><span class="blk">Build the weekly report</span></div>
+              <div class="slot" style="--t:3"><time>11:00</time><span class="blk">Chase invoices</span></div>
+              <div class="day-free"><b>Your time back ☕</b><span>Strategy, clients, or just a long lunch</span></div>
+            </div>
+            <p class="uc-caption">Busywork out. Your time back.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -280,6 +350,6 @@
     <div class="wrap">© <span id="year">2026</span> Racha Jadayel · Lisbon</div>
   </footer>
 
-  <script src="script.js?v=47" defer></script>
+  <script src="script.js?v=51" defer></script>
 </body>
 </html>

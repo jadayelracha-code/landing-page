@@ -36,21 +36,34 @@ const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 8);
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
-// Hero card: tasks tick off on their own, then one approval tap. Loops.
-const flow = document.querySelector(".flow");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-if (flow) {
-  const all = ["s1", "s2", "s3", "s4", "s5", "s6"];
-  if (reduceMotion) {
-    flow.classList.add(...all);
-  } else {
-    flow.classList.add("anim");
-    const steps = [["s1", 600], ["s2", 1300], ["s3", 2000], ["s4", 3000], ["s5", 5000], ["s6", 5600]];
-    const run = () => {
-      flow.classList.remove(...all);
-      steps.forEach(([cls, t]) => setTimeout(() => flow.classList.add(cls), t));
-      setTimeout(run, 10000);
-    };
-    run();
-  }
+
+// Use-case tabs: switch panels and replay each panel's animation.
+const tabs = document.querySelectorAll(".uc-tab");
+const panels = document.querySelectorAll(".uc-panel");
+const play = (panel) => {
+  panel.classList.remove("play");
+  void panel.offsetWidth; // restart the CSS transitions
+  panel.classList.add("play");
+};
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    tabs.forEach((t) => t.setAttribute("aria-selected", String(t === tab)));
+    panels.forEach((p) => {
+      const on = p.id === tab.getAttribute("aria-controls");
+      p.hidden = !on;
+      if (on) play(p);
+    });
+  });
+});
+const uc = document.querySelector(".uc");
+if (uc && "IntersectionObserver" in window) {
+  const ucObs = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      play(document.querySelector(".uc-panel:not([hidden])"));
+      ucObs.disconnect();
+    }
+  }, { threshold: 0.3 });
+  ucObs.observe(uc);
+} else if (uc) {
+  panels.forEach((p) => p.classList.add("play"));
 }
