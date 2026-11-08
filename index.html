@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=7">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -70,26 +70,20 @@
         </div>
       </div>
 
-      <!-- Animated illustration: work runs on its own, the owner only makes the key decision -->
+      <!-- Animated illustration: work runs on its own, you only make the key decision -->
       <div class="flow reveal" style="--d:2" aria-hidden="true">
-        <div class="flow-head"><span class="pulse"></span> Running for you while you focus</div>
-        <p class="flow-label">Done for you</p>
-        <ul class="done-list">
-          <li class="task t1"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span><div><b>New leads answered</b><small>Replies sent in your tone</small></div></li>
-          <li class="task t2"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Invoices read and filed</b><small>Key details saved for you</small></div></li>
-          <li class="task t3"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Weekly report ready</b><small>Waiting in your inbox</small></div></li>
-        </ul>
-        <div class="approve">
-          <p class="flow-label accent">Needs your OK</p>
-          <b>Proposal for a new client</b>
-          <small>Drafted by AI from your call notes</small>
-          <div class="actions">
-            <span class="b-edit">Edit</span>
-            <span class="b-ok">Approve<i class="tap"></i></span>
-          </div>
-          <div class="approved"><svg class="ico"><use href="#i-check"/></svg> Approved and sent</div>
+        <div class="flow-head"><span class="pulse"></span> Running on autopilot</div>
+        <div class="auto">
+          <div class="auto-item t1"><span class="auto-ico"><svg class="ico"><use href="#i-mail"/></svg><i class="badge"><svg class="ico"><use href="#i-check"/></svg></i></span>Leads</div>
+          <div class="auto-item t2"><span class="auto-ico"><svg class="ico"><use href="#i-doc"/></svg><i class="badge"><svg class="ico"><use href="#i-check"/></svg></i></span>Invoices</div>
+          <div class="auto-item t3"><span class="auto-ico"><svg class="ico"><use href="#i-chart"/></svg><i class="badge"><svg class="ico"><use href="#i-check"/></svg></i></span>Reports</div>
         </div>
-        <p class="flow-foot"><b>You decide.</b> Everything else runs on its own.</p>
+        <div class="approve">
+          <span class="approve-text">Proposal ready</span>
+          <span class="b-ok">Approve<i class="tap"></i></span>
+          <span class="approved"><svg class="ico"><use href="#i-check"/></svg> Sent</span>
+        </div>
+        <p class="flow-foot"><b>You decide.</b> AI does the rest.</p>
       </div>
     </div>
   </header>
@@ -236,6 +230,6 @@
     <div class="wrap">© <span id="year">2026</span> Racha Jadayel · Lisbon</div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js?v=7" defer></script>
 </body>
 </html>
