@@ -41,4 +41,4 @@ n8n, Claude, Devin, Windsurf, WhatsApp APIs, Facebook Business APIs, Supabase, G
 
 - [Home](https://rachajadayel.com/): profile, track record, process and FAQ, with a choice between the two offers
 - [0 to 1 product building](https://rachajadayel.com/build/): from idea to working MVP; outcomes, process and proof
-- [AI automation](https://rachajadayel.com/automate/): AI agents and automations; outcomes, use cases, MCP and evals
+- [AI automation](https://rachajadayel.com/automate/): an always-on, proactive AI assistant inside WhatsApp, email and existing tools (no new app); outcomes, use cases, MCP and evals
