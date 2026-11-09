@@ -290,7 +290,7 @@ a { color: var(--accent); }
   box-shadow: 0 0 0 6px rgba(139,123,255,.15), 0 0 50px -6px var(--accent);
 }
 .mcore b { font-size: clamp(.92rem, 4vw, 1.15rem); line-height: 1.1; white-space: nowrap; }
-.mcore small { font-size: .68rem; opacity: .85; }
+.mcore small { font-size: .62rem; opacity: .85; text-align: center; line-height: 1.25; padding: 0 6px; }
 .mring { position: absolute; left: 50%; top: 50%; width: 30%; aspect-ratio: 1 / 1; transform: translate(-50%, -50%); border-radius: 50%; border: 1px solid rgba(139,123,255,.6); animation: mripple 3s ease-out infinite; }
 @keyframes mripple { from { transform: translate(-50%, -50%) scale(1); opacity: .9; } to { transform: translate(-50%, -50%) scale(2); opacity: 0; } }
 .mnode {
