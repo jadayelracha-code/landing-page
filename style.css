@@ -470,6 +470,19 @@ html:not(.js) .day-free { position: static; opacity: 1; transform: none; margin-
   .js .steps li:not(.lit) > * { transform: translateY(10px); }
 }
 
+/* Degrees + certifications */
+.degrees { display: grid; gap: 12px; margin-top: 14px; }
+.degree { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 18px; border: 1px solid var(--border); background: var(--surface); }
+.degree h3 { margin: 0; font-size: 1.05rem; }
+.degree p { margin: 2px 0 0; color: var(--muted); font-size: .9rem; }
+.degree-ico { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; background: rgba(255,255,255,.06); font-size: 1.3rem; flex: none; }
+@media (min-width: 760px) { .degrees { grid-template-columns: 1fr 1fr; } }
+.creds-block { margin-top: 22px; }
+.certs-title { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+ul.creds { list-style: none; padding: 0; margin-top: 0; }
+.cred:not(.cred-gold) { border-color: var(--border); }
+.cred:not(.cred-gold) .cred-ico { background: rgba(255,255,255,.06); }
+
 /* Credentials */
 .creds { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
 .cred { display: inline-flex; align-items: center; gap: 12px; padding: 10px 18px 10px 12px; border-radius: 999px; background: var(--surface); border: 1px solid rgba(252,211,77,.35); color: var(--muted); font-size: .9rem; }
