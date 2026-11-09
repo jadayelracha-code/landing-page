@@ -49,6 +49,13 @@ a { color: var(--accent); }
 .logo:hover { transform: scale(1.06); }
 .logo img { clip-path: circle(50%); display: block; width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg); }
 
+.nav-left { display: flex; align-items: center; gap: 12px; }
+.back-home { display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px 0 10px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-weight: 700; font-size: .9rem; text-decoration: none; transition: border-color .2s, background .2s; }
+.back-home .ico { transform: rotate(180deg); transition: transform .2s var(--ease); }
+.back-home:hover { border-color: var(--accent); background: var(--accent-soft); }
+.back-home:hover .ico { transform: rotate(180deg) translateX(3px); }
+.back-home:focus-visible { outline: 3px solid #c4bbff; outline-offset: 2px; }
+
 /* Buttons */
 .btn {
   position: relative; overflow: hidden;
