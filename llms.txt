@@ -38,4 +38,4 @@ n8n, Claude, Devin, Windsurf, WhatsApp APIs, Facebook Business APIs, Supabase, G
 
 ## Pages
 
-- [Home](https://jadayelracha-code.github.io/landing-page/): full profile, services, use cases, process, track record and FAQ
+- [Home](https://rachajadayel.com/): full profile, services, use cases, process, track record and FAQ

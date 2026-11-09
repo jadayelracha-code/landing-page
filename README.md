@@ -4,7 +4,7 @@ One-page, mobile-first site for people I meet at Web Summit. They scan a QR code
 
 Plain HTML, CSS and a little JS. No framework, no build step.
 
-**Live URL:** https://jadayelracha-code.github.io/landing-page/
+**Live URL:** https://rachajadayel.com/
 
 ## Page sections
 
@@ -32,8 +32,9 @@ Plain HTML, CSS and a little JS. No framework, no build step.
 | `assets/cmu-portugal-academy.png` | CMU Portugal Academy logo |
 | `assets/favicon*.png`, `assets/apple-touch-icon.png` | Browser and phone icons |
 | `assets/icons.svg` | All line and brand icons (one file, referenced by the page) |
+| `CNAME` | Custom domain for GitHub Pages (rachajadayel.com). Do not delete |
 | `sitemap.xml` | Sitemap with image entries, to submit in Google Search Console |
-| `robots.txt` | Allows search engines and AI crawlers. Only takes effect at a domain root, so after the custom domain is set up |
+| `robots.txt` | Allows search engines and AI crawlers |
 | `llms.txt` | Plain-text summary for AI tools (an emerging, optional convention) |
 
 ## AI search (GEO) setup
@@ -57,13 +58,11 @@ Also replace the same link in `index.html` (buttons, FAQ and structured data), s
 
 ## After an update
 
-Files are loaded with a version number (`style.css?v=61`). Raise the number in `index.html` after changing CSS or JS, so browsers load the new files instead of an old saved copy.
+Files are loaded with a version number (`style.css?v=70`). Raise the number in `index.html` after changing CSS or JS, so browsers load the new files instead of an old saved copy.
 
-## Moving to a custom domain
+## Domain
 
-1. Add the domain in **Settings → Pages → Custom domain** and set up DNS as GitHub describes.
-2. Replace `https://jadayelracha-code.github.io/landing-page/` everywhere in `index.html` (canonical, Open Graph, X, structured data), `sitemap.xml`, `robots.txt` and `llms.txt`.
-3. Regenerate `assets/qr.png` for the new address.
+The site runs on **rachajadayel.com**, registered at Cloudflare (DNS only records pointing to GitHub Pages: 4 A, 4 AAAA and a `www` CNAME). The `CNAME` file in this repo tells GitHub Pages to serve the custom domain. Renewal reminders are in Google Calendar for 2 to 9 November 2029.
 
 ## Preview locally
 

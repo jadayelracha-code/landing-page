@@ -1,6 +1,4 @@
 # Search engines and AI assistants are welcome to read and cite this site.
-# Note: crawlers only read robots.txt at the root of a domain, so this file
-# takes effect once the site is served from its own domain.
 
 User-agent: Googlebot
 User-agent: Bingbot
@@ -21,4 +19,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://jadayelracha-code.github.io/landing-page/sitemap.xml
+Sitemap: https://rachajadayel.com/sitemap.xml
