@@ -153,7 +153,7 @@ if (duo) {
   const panels = [...duo.querySelectorAll(".duo-panel")];
   let timer;
   const show = (mode) => {
-    tabs.forEach((t) => { const on = t.dataset.mode === mode; t.classList.toggle("is-on", on); t.setAttribute("aria-selected", String(on)); });
+    tabs.forEach((t) => { const on = t.dataset.mode === mode; t.classList.toggle("is-on", on); if (on) t.setAttribute("aria-current", "true"); else t.removeAttribute("aria-current"); });
     // restart the timer bar on the active tab
     tabs.forEach((t) => { t.style.animation = "none"; void t.offsetWidth; t.style.animation = ""; });
     panels.forEach((p) => {
@@ -168,6 +168,10 @@ if (duo) {
   };
   const next = () => show(duo.querySelector(".duo-tab.is-on").dataset.mode === "build" ? "automate" : "build");
   const start = () => { clearInterval(timer); timer = setInterval(next, 8000); };
-  tabs.forEach((t) => t.addEventListener("click", () => { show(t.dataset.mode); start(); }));
+  // Tabs are links to /build/ and /automate/. Clicking the visual opens the page of the story on show.
+  panels.forEach((p) => {
+    p.style.cursor = "pointer";
+    p.addEventListener("click", () => { window.location.href = p.dataset.mode === "build" ? "/build/" : "/automate/"; });
+  });
   show("build"); start();
 }
