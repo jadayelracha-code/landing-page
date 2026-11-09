@@ -145,3 +145,29 @@ document.querySelectorAll(".tile").forEach((tile) => {
     tile.style.setProperty("--my", `${e.clientY - r.top}px`);
   });
 });
+
+// Homepage hero: alternate the Build and Automate stories every 8 seconds (or on tap).
+const duo = document.querySelector(".duo");
+if (duo) {
+  const tabs = [...duo.querySelectorAll(".duo-tab")];
+  const panels = [...duo.querySelectorAll(".duo-panel")];
+  let timer;
+  const show = (mode) => {
+    tabs.forEach((t) => { const on = t.dataset.mode === mode; t.classList.toggle("is-on", on); t.setAttribute("aria-selected", String(on)); });
+    // restart the timer bar on the active tab
+    tabs.forEach((t) => { t.style.animation = "none"; void t.offsetWidth; t.style.animation = ""; });
+    panels.forEach((p) => {
+      const on = p.dataset.mode === mode;
+      p.classList.toggle("is-on", on);
+      if (on) {
+        // replay this story from the start
+        p.classList.remove("in"); void p.offsetWidth; p.classList.add("in");
+        p.getAnimations({ subtree: true }).forEach((a) => { a.currentTime = 0; });
+      }
+    });
+  };
+  const next = () => show(duo.querySelector(".duo-tab.is-on").dataset.mode === "build" ? "automate" : "build");
+  const start = () => { clearInterval(timer); timer = setInterval(next, 8000); };
+  tabs.forEach((t) => t.addEventListener("click", () => { show(t.dataset.mode); start(); }));
+  show("build"); start();
+}
