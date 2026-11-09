@@ -25,7 +25,7 @@
 - Pharmaklik, Founder (2017–2022): Flat6Labs-backed platform digitizing Lebanon's pharmacy supply chain; 2,000+ pharmacies (~70% of the national market) at ~$1 acquisition cost each
 - Saydale.com, Founder (2020–2022): non-profit platform helping patients in Lebanon find medicines during the national shortage; 20,000+ patient requests in 6 months; Berytech Healthcare Initiative 2020 award
 - Volkswagen Digital Solutions, Product Manager (2022–2025)
-- CompuGroup Medical, Product Owner AI (2025–now)
+- CompuGroup Medical, Product Owner AI (2025–now): patient portal, data transformation platform, AI QA automation
 - The Fourth Player, Founder (2026–now): live WhatsApp padel matchmaking bot built with n8n and AI — https://thefourthplayer.com/
 
 ## Education & credentials
