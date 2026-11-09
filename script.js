@@ -146,6 +146,49 @@ document.querySelectorAll(".tile").forEach((tile) => {
   });
 });
 
+// Smart loader: a short branded transition when moving between the home, build and automate pages.
+const ROUTES = {
+  "/build/": { ico: "🚀", title: "Taking you to product building", sub: "From idea to something people can use", tone: "build" },
+  "/automate/": { ico: "⚙️", title: "Taking you to AI automation", sub: "Your always-on AI assistant", tone: "automate" },
+  "/": { ico: "🏠", title: "Back to home", sub: "Launch your idea. Automate your busywork.", tone: "home" },
+};
+const loaderEl = (() => {
+  const el = document.createElement("div");
+  el.className = "page-loader";
+  el.setAttribute("role", "status");
+  el.setAttribute("aria-live", "polite");
+  el.innerHTML = '<div class="pl-card"><span class="pl-ico" aria-hidden="true"></span><b class="pl-title"></b><span class="pl-sub"></span><span class="pl-bar"><i></i></span></div>';
+  document.body.appendChild(el);
+  return el;
+})();
+let leaving = false;
+function goTo(href) {
+  if (leaving) return;
+  const route = ROUTES[new URL(href, location.href).pathname];
+  if (!route) { location.href = href; return; }
+  leaving = true;
+  loaderEl.dataset.tone = route.tone;
+  loaderEl.querySelector(".pl-ico").textContent = route.ico;
+  loaderEl.querySelector(".pl-title").textContent = route.title;
+  loaderEl.querySelector(".pl-sub").textContent = route.sub;
+  loaderEl.classList.add("show");
+  setTimeout(() => { location.href = href; }, 750);
+}
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a[href]");
+  if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target === "_blank") return;
+  const url = new URL(a.getAttribute("href"), location.href);
+  if (url.origin !== location.origin || !ROUTES[url.pathname] || url.pathname === location.pathname) return;
+  e.preventDefault();
+  goTo(url.href);
+});
+// Coming back with the browser's back button: hide the loader again.
+window.addEventListener("pageshow", () => { leaving = false; loaderEl.classList.remove("show"); });
+// Preload the other pages so the switch feels instant.
+Object.keys(ROUTES).filter((p) => p !== location.pathname).forEach((p) => {
+  const l = document.createElement("link"); l.rel = "prefetch"; l.href = p; document.head.appendChild(l);
+});
+
 // Homepage hero: alternate the Build and Automate stories every 8 seconds (or on tap).
 const duo = document.querySelector(".duo");
 if (duo) {
@@ -171,7 +214,7 @@ if (duo) {
   // Tabs are links to /build/ and /automate/. Clicking the visual opens the page of the story on show.
   panels.forEach((p) => {
     p.style.cursor = "pointer";
-    p.addEventListener("click", () => { window.location.href = p.dataset.mode === "build" ? "/build/" : "/automate/"; });
+    p.addEventListener("click", () => goTo(p.dataset.mode === "build" ? "/build/" : "/automate/"));
   });
   show("build"); start();
 }
