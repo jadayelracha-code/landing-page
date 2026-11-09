@@ -782,6 +782,7 @@ a.duo-tab { text-decoration: none; display: inline-flex; align-items: center; ga
 
 /* Homepage hero spacing: keep the intro, headline, copy and action cards together */
 .hero-copy > .intro { margin-bottom: 20px; }
-.hero-copy > h1 { margin-bottom: clamp(12px, 1.5vw, 18px); }
+.hero-copy > h1 { margin-bottom: clamp(12px, 1.5vw, 18px); font-size: clamp(2rem, 6.5vw, 3.5rem); }
 .hero-copy > .lead { margin-bottom: 16px; }
 .hero-copy > .doors { margin-top: 0; }
+.hero-copy .door-text small { font-size: 1rem; }
