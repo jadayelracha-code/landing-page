@@ -9,6 +9,7 @@
 - Location: Lisbon, Portugal; works remotely with clients in Portugal and the GCC (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman)
 - Approach: human-led discovery first, AI agents do the delivery, evals check the output where it matters
 - Booking: https://calendly.com/jadayelracha/30min-free-call
+- Email: hello@rachajadayel.com
 - LinkedIn: https://www.linkedin.com/in/rashajadayel
 
 ## Services

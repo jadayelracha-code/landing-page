@@ -260,6 +260,10 @@ a { color: var(--accent); }
 .cta .links a { color: #fff; font-weight: 600; }
 .li-btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; padding: 10px 20px 10px 12px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,.6); transition: background .25s, transform .25s var(--ease); }
 .li-btn:hover { background: rgba(255,255,255,.15); transform: translateY(-2px); }
+.cta .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.mail-ico { color: #fff; }
+.footer a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.footer a:hover { color: var(--text); }
 .li-ico { width: 26px; height: 26px; color: #fff; --li-ink: #5b4ef0; flex: none; }
 @keyframes gradientMove { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 

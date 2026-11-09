@@ -3,7 +3,7 @@
 const CALENDLY_URL = "https://calendly.com/jadayelracha/30min-free-call";
 
 const PLACEHOLDER = "https://calendly.com/YOUR-LINK";
-const FALLBACK = "mailto:jadayelracha@gmail.com?subject=Free%2030-min%20intro%20call";
+const FALLBACK = "mailto:hello@rachajadayel.com?subject=Free%2030-min%20intro%20call";
 
 const bookingUrl = CALENDLY_URL && CALENDLY_URL !== PLACEHOLDER ? CALENDLY_URL : FALLBACK;
 

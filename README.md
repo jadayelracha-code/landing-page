@@ -71,7 +71,7 @@ Open `script.js` and edit line 3:
 const CALENDLY_URL = "https://calendly.com/jadayelracha/30min-free-call";
 ```
 
-Also replace the same link in `index.html` (buttons, FAQ and structured data), so crawlers that do not run JavaScript see it too. Every **Book a free intro call** button uses this link. If it is set back to `https://calendly.com/YOUR-LINK`, the buttons fall back to an email to jadayelracha@gmail.com.
+Also replace the same link in `index.html` (buttons, FAQ and structured data), so crawlers that do not run JavaScript see it too. Every **Book a free intro call** button uses this link. If it is set back to `https://calendly.com/YOUR-LINK`, the buttons fall back to an email to hello@rachajadayel.com.
 
 ## After an update
 
