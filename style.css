@@ -596,6 +596,53 @@ html:not(.js) .day-free { position: static; opacity: 1; transform: none; margin-
 .crosslink b { display: inline-flex; align-items: center; gap: 8px; color: var(--text); }
 .crosslink:hover { border-color: var(--accent); }
 
+/* /build hero: idea sketch to live product (8s loop) */
+.i2p { width: 100%; max-width: 440px; justify-self: center; }
+.i2p-stage { position: relative; height: 360px; }
+.napkin, .app { position: absolute; inset: 0; border-radius: 20px; }
+.napkin { background: #fbf8f1; color: #1d3fa8; padding: 20px 22px; transform: rotate(-2deg); box-shadow: 0 30px 80px -30px rgba(109,93,252,.6); background-image: radial-gradient(rgba(29,63,168,.08) 1px, transparent 1px); background-size: 14px 14px; animation: napOut 8s ease-in-out infinite; }
+.nap-title { margin: 0 0 6px; font-family: "Caveat", cursive; font-size: 1.9rem; font-weight: 700; }
+.nap-sketch { width: 78%; height: auto; fill: none; stroke: #1d3fa8; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: sketch 8s ease-in-out infinite; }
+.nap-note { position: absolute; margin: 0; font-family: "Caveat", cursive; font-size: 1.25rem; font-weight: 700; color: #c41230; opacity: 0; animation: noteIn 8s ease-in-out infinite; }
+.n1 { right: 18px; top: 92px; animation-delay: .2s; transform: rotate(6deg); }
+.n2 { left: 150px; top: 268px; animation-delay: .5s; }
+.n3 { right: 22px; top: 190px; animation-delay: .8s; transform: rotate(-5deg); }
+.app { background: linear-gradient(160deg, #1b1b30, #12121f); border: 1px solid rgba(139,123,255,.45); padding: 18px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 30px 80px -30px rgba(34,211,238,.5); opacity: 0; transform: translateY(24px) scale(.96); animation: appIn 8s ease-in-out infinite; }
+.app-bar { display: flex; align-items: center; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.app-dot { width: 28px; height: 28px; border-radius: 9px; background: linear-gradient(135deg, var(--accent), #22d3ee); }
+.app-live { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font-size: .78rem; font-weight: 700; color: #6ee7b7; background: rgba(52,211,153,.12); padding: 4px 10px; border-radius: 999px; }
+.app-live i { width: 7px; height: 7px; border-radius: 50%; background: #34d399; animation: ping 2s infinite; }
+.app-card { display: grid; gap: 4px; padding: 16px; border-radius: 14px; background: rgba(255,255,255,.05); }
+.app-card b { font-size: 1.15rem; } .app-card span { color: var(--muted); }
+.app-btn { text-align: center; font-weight: 700; padding: 12px; border-radius: 999px; background: linear-gradient(135deg, var(--accent), var(--accent-strong)); color: #fff; }
+.app-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: auto; }
+.app-stats p { margin: 0; display: grid; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--border); }
+.app-stats b { font-size: 1.3rem; } .app-stats small { color: var(--muted); font-size: .78rem; }
+.i2p-steps { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; position: relative; }
+.i2p-steps li { text-align: center; font-size: .8rem; font-weight: 700; color: var(--muted); padding-top: 14px; position: relative; transition: color .3s; }
+.i2p-steps li::before { content: ""; position: absolute; left: 50%; top: 0; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--border); }
+.i2p-steps li:nth-child(-n+2) { --c: #fde047; } .i2p-steps li:nth-child(n+3) { --c: #22d3ee; }
+.i2p-steps li:nth-child(1), .i2p-steps li:nth-child(1)::before { animation: s1 8s infinite; }
+.i2p-steps li:nth-child(2), .i2p-steps li:nth-child(2)::before { animation: s2 8s infinite; }
+.i2p-steps li:nth-child(3), .i2p-steps li:nth-child(3)::before { animation: s3 8s infinite; }
+.i2p-steps li:nth-child(4), .i2p-steps li:nth-child(4)::before { animation: s4 8s infinite; }
+@keyframes s1 { 0%, 94% { color: var(--text); background-color: var(--c); box-shadow: 0 0 12px var(--c); } 100% { color: var(--muted); } }
+@keyframes s2 { 0%, 24% { color: var(--muted); background-color: var(--border); box-shadow: none; } 28%, 94% { color: var(--text); background-color: var(--c); box-shadow: 0 0 12px var(--c); } 100% { color: var(--muted); } }
+@keyframes s3 { 0%, 50% { color: var(--muted); background-color: var(--border); box-shadow: none; } 54%, 94% { color: var(--text); background-color: var(--c); box-shadow: 0 0 12px var(--c); } 100% { color: var(--muted); } }
+@keyframes s4 { 0%, 62% { color: var(--muted); background-color: var(--border); box-shadow: none; } 66%, 94% { color: var(--text); background-color: var(--c); box-shadow: 0 0 12px var(--c); } 100% { color: var(--muted); } }
+.i2p-steps li { background: none !important; box-shadow: none !important; }
+.i2p-caption { text-align: center; margin: 10px 0 0; color: var(--muted); font-size: .9rem; }
+@keyframes sketch { 0% { stroke-dashoffset: 1400; } 25%, 100% { stroke-dashoffset: 0; } }
+@keyframes noteIn { 0%, 18% { opacity: 0; } 26%, 100% { opacity: 1; } }
+@keyframes napOut { 0%, 45% { opacity: 1; transform: rotate(-2deg); } 55%, 92% { opacity: 0; transform: rotate(-8deg) translateX(-30px) scale(.92); } 100% { opacity: 1; transform: rotate(-2deg); } }
+@keyframes appIn { 0%, 48% { opacity: 0; transform: translateY(24px) scale(.96); } 58%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; transform: translateY(24px) scale(.96); } }
+/* start the story only once it scrolls into view */
+.js .i2p:not(.in) *, .js .i2p:not(.in) *::before { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) {
+  .napkin { display: none; } .app { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .i2p-steps li { color: var(--text); } .i2p-steps li::before { background: var(--c); }
+}
+
 /* Scroll reveal (only when JS runs, so content never stays hidden) */
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--d, 0) * 110ms); }
 .js .reveal.in { opacity: 1; transform: none; }
