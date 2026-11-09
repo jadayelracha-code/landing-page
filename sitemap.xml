@@ -11,4 +11,12 @@
       <image:loc>https://rachajadayel.com/assets/og-image.jpg</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://rachajadayel.com/build/</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://rachajadayel.com/automate/</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
 </urlset>

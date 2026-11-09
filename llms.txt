@@ -13,6 +13,7 @@
 
 ## Services
 
+- 0 to 1 product building: from idea to working MVP, discovery first, AI-built (Claude Code, Supabase, n8n)
 - Lead follow-up automation
 - WhatsApp bots (questions, bookings, matchmaking)
 - Automated reporting
@@ -38,4 +39,6 @@ n8n, Claude, Devin, Windsurf, WhatsApp APIs, Facebook Business APIs, Supabase, G
 
 ## Pages
 
-- [Home](https://rachajadayel.com/): full profile, services, use cases, process, track record and FAQ
+- [Home](https://rachajadayel.com/): profile, track record, process and FAQ, with a choice between the two offers
+- [0 to 1 product building](https://rachajadayel.com/build/): from idea to working MVP; outcomes, process and proof
+- [AI automation](https://rachajadayel.com/automate/): AI agents and automations; outcomes, use cases, MCP and evals

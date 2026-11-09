@@ -8,7 +8,11 @@ const FALLBACK = "mailto:jadayelracha@gmail.com?subject=Free%2030-min%20intro%20
 const bookingUrl = CALENDLY_URL && CALENDLY_URL !== PLACEHOLDER ? CALENDLY_URL : FALLBACK;
 
 document.querySelectorAll(".js-book").forEach((btn) => {
-  btn.href = bookingUrl;
+  // Each page tags its booking links (home, build, automate) so Calendly shows where a booking came from.
+  const campaign = btn.dataset.campaign;
+  btn.href = campaign && bookingUrl.startsWith("http")
+    ? `${bookingUrl}?utm_source=rachajadayel.com&utm_medium=website&utm_campaign=${campaign}`
+    : bookingUrl;
   if (bookingUrl.startsWith("http")) {
     btn.target = "_blank";
     btn.rel = "noopener";

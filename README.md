@@ -6,6 +6,23 @@ Plain HTML, CSS and a little JS. No framework, no build step.
 
 **Live URL:** https://rachajadayel.com/
 
+## Web Summit experiment
+
+The site tests which offer people care about more:
+
+| Page | Offer | QR code | Booking tag |
+| --- | --- | --- | --- |
+| `/` (home) | Choose a door: build or automate | `assets/qr.png` | `utm_campaign=home` |
+| `/build/` | 0 to 1 product building (idea to MVP) | `assets/qr-build.png` | `utm_campaign=build` |
+| `/automate/` | AI automation | `assets/qr-automate.png` | `utm_campaign=automate` |
+
+**Where to read the results**
+- **Visits per page:** Cloudflare dashboard → Analytics & Logs → Web Analytics → rachajadayel.com (cookie-free).
+- **Bookings per offer:** in Calendly, each booking shows its UTM campaign (home, build or automate).
+- **Conversations:** keep a simple tally of what people say they need.
+
+The pages are generated from shared sections; edit shared content (proof, process, FAQ answers) in all three HTML files.
+
 ## Page sections
 
 1. **Hero:** name and role, headline, free intro call button, and an animated prescription card ("Rx for your business")
@@ -58,7 +75,7 @@ Also replace the same link in `index.html` (buttons, FAQ and structured data), s
 
 ## After an update
 
-Files are loaded with a version number (`style.css?v=70`). Raise the number in `index.html` after changing CSS or JS, so browsers load the new files instead of an old saved copy.
+Files are loaded with a version number (`style.css?v=71`). Raise the number in `index.html` after changing CSS or JS, so browsers load the new files instead of an old saved copy.
 
 ## Domain
 
