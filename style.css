@@ -779,3 +779,9 @@ a.duo-tab { text-decoration: none; display: inline-flex; align-items: center; ga
 @media (prefers-reduced-motion: reduce) and (min-width: 900px) {
   .steps::after { animation: cometX 3.5s linear infinite !important; transition: transform 2.2s cubic-bezier(.4,0,.2,1) !important; }
 }
+
+/* Homepage hero spacing: keep the intro, headline, copy and action cards together */
+.hero-copy > .intro { margin-bottom: 20px; }
+.hero-copy > h1 { margin-bottom: clamp(12px, 1.5vw, 18px); }
+.hero-copy > .lead { margin-bottom: 16px; }
+.hero-copy > .doors { margin-top: 0; }
