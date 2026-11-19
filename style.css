@@ -786,3 +786,12 @@ a.duo-tab { text-decoration: none; display: inline-flex; align-items: center; ga
 .hero-copy > .lead { margin-bottom: 16px; }
 .hero-copy > .doors { margin-top: 0; }
 .hero-copy .door-text small { font-size: 1rem; }
+/* iPhone overflow safety net */
+html { overflow-x: clip; }
+.bento { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .bento { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.tile, .tile article { min-width: 0; }
+.tile h3, .tile p, .tile small, .tile .when { overflow-wrap: anywhere; }
+.tile-top { flex-wrap: wrap; }
+.pills span { white-space: normal; }
+.minis { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
